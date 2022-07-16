@@ -1,0 +1,197 @@
+==================================
+Default Model
+==================================
+1 | 00:18.459 | 100 | Complete
+2 | 00:18.603 | 100 | Complete
+3 | 00:18.137 | 100 | Complete
+4 | 00:18.335 | 100 | Complete
+5 | 00:18.203 | 100 | Complete
+
+Fastest time: 18.137
+Average time: 18.347
+
+(All Default Settings)
+
+==================================
+TaylorHailMary (v1)
+==================================
+1 | 00:15.127 | 100 | Complete
+2 | 00:15:203 | 100 | Complete
+3 | 00:17:604 | 100 | Complete
+4 | 00:14.466 | 100 | Complete
+5 | 00:14.468 | 100 | Complete
+
+Fastest time: 14.466
+Average time: 15.374
+
+learning_rate = 0.001
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.1
+
+==================================
+Taylorv2-noleftlanepolicy
+==================================
+
+1 | 00:21.366 | 100 | Complete
+2 | 00:20.139 | 100 | Complete
+3 | 00:20.401 | 100 | Complete
+4 | 00:23.539 | 100 | Complete
+5 | 00:18.060 | 100 | Complete
+
+Fastest time: 18.060
+Average time: 20.701
+
+learning_rate = 0.00065
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.0
+
+==================================
+Taylorv3-noleftlanepolicy-up-lr
+==================================
+
+1 | 00:22.283 | 100 | Complete
+2 | 00:31.735 | 100 | Complete
+3 | 00:30.607 | 100 | Complete
+4 | 00:21.817 | 100 | Complete
+5 | 00:28.067 | 100 | Complete
+
+Fastest time: 21.817
+Average time: 26.902
+
+learning_rate = 0.001
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.0
+
+==================================
+Taylorv4-increased-speed
+==================================
+
+1 | 00:18.220 | 100 | Complete
+2 | 00:15.387 | 100 | Complete
+3 | 00:14.538 | 100 | Complete
+4 | 00:14.869 | 100 | Complete
+5 | 00:20.069 | 100 | Complete
+
+Fastest time: 14.538
+Average time: 16.616
+
+learning_rate = 0.001
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.0
+
+Car_Max_Speed = 1.5 m/s
+
+Added segment to reward faster speeds
+
+# The faster you go, the more reward you have
+reward += reward + (speed*.1)
+
+# To encourage the car to stay fast
+if speed <= SPEED_THRESHOLD:
+    reward *= SPEED_PENALTY 
+
+==================================
+Taylorv4-3-hour-training-lr001
+==================================
+
+1 | 00:15.861 | 100 | Complete
+2 | 00:16.673 | 100 | Complete
+3 | 00:15.530 | 100 | Complete
+4 | 00:16.067 | 100 | Complete
+5 | 00:19.068 | 100 | Complete
+
+Fastest time: 15.530
+Average time: 16.640
+
+learning_rate = 0.001
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.0
+
+Car_Max_Speed = 1.5 m/s
+128 batch size
+10 epochs
+
+==================================
+Taylorv4-3-hour-training-lr0003
+==================================
+
+1 | 00:17.402 | 100 | Complete
+2 | 00:16.860 | 100 | Complete
+3 | 00:17.197 | 100 | Complete
+4 | 00:17.536 | 100 | Complete
+5 | 00:16.800 | 100 | Complete
+
+Fastest time: 16.800
+Average time: 17.159
+
+learning_rate = 0.0003
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.0
+
+Car_Max_Speed = 1.5 m/s
+128 batch size
+10 epochs
+
+==================================
+TaylorHailMary-3-hour-lr001
+==================================
+1 | 00:15.394 | 100 | Complete
+2 | 00:15.993 | 100 | Complete
+3 | 00:15.824 | 100 | Complete
+4 | 00:15.591 | 100 | Complete
+5 | 00:15.455 | 100 | Complete
+
+Fastest time: 15.455
+Average time: 15.651
+
+learning_rate = 0.001
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.1
+
+Car_Max_Speed = 1.5 m/s
+128 batch size
+10 epochs
+
+==================================
+TaylorHailMary-3-hour-lr0003
+==================================
+1 | 00:15.130 | 100 | Complete
+2 | 00:14.744 | 100 | Complete
+3 | 00:13.390 | 100 | Complete
+4 | 00:15.198 | 100 | Complete
+5 | 00:14.936 | 100 | Complete
+
+Fastest time: 13.390
+Average time: 14.680
+
+learning_rate = 0.001
+ABS_STEERING_THRESHOLD = 15 
+SPEED_THRESHOLD = 0.6
+SPEED_PENALTY = 0.9
+STEERING_PENALTY = 0.8
+LEFT_OF_CENTER_REWARD = 0.1
+
+Car_Max_Speed = 1.5 m/s
+128 batch size
+10 epochs
